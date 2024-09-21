@@ -1,34 +1,31 @@
-import { Box,
-    Container,
-    Tab,
-    TabList,
-    TabPanel,
-    TabPanels,
-    Tabs,
-    Text, } from "@chakra-ui/react";
+import { Box, Container, Tab, TabList, TabPanel, TabPanels, Tabs, Text } from "@chakra-ui/react";
 import React from "react";
 import Login from "../Components/Authentication/Login";
-import Signup from "../Components/Authentication/SignUp"
+import Signup from "../Components/Authentication/SignUp";
 
-
-const HomePage = () =>{
-    return <Container
-        maxW="xl" centerContent>
-        <Box
-            d="flex"
-            justifyContent="center"
-            p={3}
-            bg={"white"}
-            w="100%"
-            m="40px 0 15px 0"
-            borderRadius="lg"
-            borderWidth="1px"
-           > 
-            <Text fontSize="xx-large" fontFamily="Work sans" color="black">
-                Talky-Sphere
-            </Text>
-        </Box>
-        <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+const HomePage = () => {
+  return (
+    <Container maxW="xl" centerContent>
+      <Box
+        display="flex" // Correct property for flexbox
+        justifyContent="center" // Horizontal centering
+        alignItems="center" // Vertical centering
+        p={3}
+        bg={"white"}
+        w="100%"
+        m="40px 0 15px 0"
+        borderRadius="lg"
+        borderWidth="1px"
+      >
+        <Text
+          fontSize="4xl" // Adjusted font size for better visibility
+          fontFamily="Work sans"
+          color="black"
+        >
+          Talky-Sphere
+        </Text>
+      </Box>
+      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>
@@ -36,7 +33,7 @@ const HomePage = () =>{
           </TabList>
           <TabPanels>
             <TabPanel>
-              <Login/>
+              <Login />
             </TabPanel>
             <TabPanel>
               <Signup />
@@ -45,6 +42,7 @@ const HomePage = () =>{
         </Tabs>
       </Box>
     </Container>
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
