@@ -5,7 +5,7 @@ const userModel=mongoose.Schema({
         type:String,trim:true
     },
     email:{
-        type:String,require:true
+        type:String,require:true,unique:true
     },
     password:{
         type:String,require:true
